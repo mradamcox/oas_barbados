@@ -1,0 +1,153 @@
+
+/******************************************************/
+/*		Navbar							  */
+/******************************************************/
+#mainnav, #mainnav-container {
+	background-color: #21438D;
+	color: #fff;
+}
+#mainnav-menu>.active {
+	background-color: #0a152d;
+}
+#mainnav-menu a {
+	color: white;
+}
+#mainnav-menu>li>a.hover {
+    color: #fff;
+    background-color: #21438D;
+    box-shadow: inset 4px 0 0 0 #FAE648;
+}
+.navbar-header {
+    background-color: #21438D
+}
+.navbar-content {
+    box-shadow: inset -4px 0 0 0 #FAE648
+}
+@media(min-width:768px) {
+   .navbar-header:before {
+        height: 40px;
+        background-color: #21438D
+    }
+}
+
+#mainnav-menu>li>a.hover {
+    color: #fff;
+    background-color: #21438D;
+    box-shadow: inset 4px 0 0 0 #FAE648
+}
+
+#mainnav-menu>.active-link>a,
+#mainnav-menu>.active-link>a:hover {
+    color: #fff;
+    background-color: #21438D;
+    box-shadow: inset 4px 0 0 0 #FAE648;
+}
+
+
+#mainnav-menu>.active .active {
+    background-color: #FAE648;
+}
+#mainnav-menu ul .active-link a,
+.menu-popover .sub-menu ul .active-link a {
+    font-weight: 600;
+    color: #fff;
+    box-shadow: inset 4px 0 0 0 #FAE648;
+    -webkit-transition: background-color .2s, padding-left .3s, box-shadow .4s;
+    transition: background-color .2s, padding-left .3s, box-shadow .4s
+}
+
+#container.mainnav-sm #mainnav-menu>.active-link>a,
+#container.mainnav-sm #mainnav-menu>.active-sub>a,
+#container.mainnav-sm #mainnav-menu>.active-link a:hover,
+#container.mainnav-sm #mainnav-menu>.active-sub a:hover {
+    background-color: #FAE648;
+}
+
+
+
+@media(min-width:768px) {
+    #container.mainnav-sm .shortcut-grid:hover {
+        box-shadow: inset 4px 0 0 0 #FAE648;
+        -webkit-transition: background-color .2s, padding-left .3s, box-shadow .4s;
+        transition: background-color .2s, padding-left .3s, box-shadow .4s
+    }
+    #container.mainnav-sm .shortcut-grid:hover,
+    #container.mainnav-sm .popover.mainnav-shortcut {
+        background-color: #21438D;
+        color: #fff
+    }
+    
+    #container.mainnav-sm #mainnav-menu a:hover {
+        box-shadow: inset 4px 0 0 0 #FAE648
+    }
+    
+    #container.mainnav-sm #mainnav-menu .active-link>a,
+    #container.mainnav-sm #mainnav-menu .active-sub>a {
+        color: #21438D;
+    }
+    
+    #container.mainnav-sm #mainnav .mainnav-widget>.show-small a {
+        display: block;
+        color: #fff;
+        padding: 12px 0 12px 18.5px
+    }
+    #container.mainnav-sm #mainnav .mainnav-widget>.show-small a:hover {
+        color: #21438D;
+        box-shadow: inset 4px 0 0 0 #FAE648;
+        -webkit-transition: background-color .2s, padding-left .3s, box-shadow .4s;
+        transition: background-color .2s, padding-left .3s, box-shadow .4s
+    }
+   
+    #container.mainnav-sm #mainnav .mainnav-widget .hover {
+        color: #fff;
+        background-color: #21438D
+    }
+   
+    .menu-popover .sub-menu ul {
+        background-color: #0a152d
+    }
+    .menu-popover .sub-menu ul ul {
+        background-color: #0a152d
+    }
+    .menu-popover .sub-menu ul li>a {
+        color: #fff;
+    }
+    .menu-popover .single-content {
+        color: #fff;
+        background-color: #21438D
+    }
+    .menu-popover.popover {
+        background-color: #0a152d;
+        color: #fff;
+
+    }
+   
+    .menu-popover>.popover-title {
+      
+        background-color: #21438D;
+        color: #fff
+    }
+    .menu-popover>.popover-title strong {
+        font-weight: 300
+    }
+   
+    .menu-popover .mainnav-widget-content {
+        background-color: #21438D
+    }
+}
+
+.mainnav-sm .popover.mainnav-shortcut {
+    background-color: #0a152d;
+    color: #fff;
+}
+
+@media(min-width:768px) {
+    #container.mainnav-in.easeInBack:not(.boxed-layout) #mainnav-container {
+        box-shadow: -20px 0 0 0 #21438D
+    }
+  
+    #container.mainnav-out .brand-title {
+        background-color: transparent;
+        color: #454545
+    }
+}
