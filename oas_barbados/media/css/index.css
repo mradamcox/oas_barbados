@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, li, li a, p {
 	text-transform: none;
 	font-weight: 900;
 	color: #000;
-    padding-top: 50px;
+    padding-top: 0px;
 }
 h2.heading-md {
 	font-size: 24px;
@@ -42,10 +42,10 @@ a {
 }
 .btn-primary:hover {
 	background-color: #21438D;
-	color: #FAE648;
+	color: #FFC726;
 }
 .btn-primary {
-	background-color: #FAE648;
+	background-color: #FFC726;
 	color: #21438D;
 }
 .about-section a {
@@ -66,7 +66,7 @@ a {
 	color: #fff;
 }
 .one-page-header .navbar-nav>li>a:hover {
-	color: #FAE648;
+	color: #FFC726;
 }
 .one-page-header .navbar-nav>li> .fa-chevron-circle-down {
     padding: 0px 0px 0px;
@@ -93,6 +93,24 @@ div.collapse.navbar-collapse.navbar-ex1-collapse > div > ul {
     .one-page-header .navbar-nav>li> .fa-chevron-circle-down {
         color: #fff;
     }
+}
+@media (max-width: 600px) {
+    .navbar-brand img {
+        width: 90%;
+        padding-top: 0.2em; 
+    }
+    .one-page-header .navbar-brand {
+        min-height: 50%;
+        width:85%;
+    }
+}
+    .one-page-header .navbar-brand {
+        padding-top: 1.2em;
+        min-height: 50%;
+}
+    .one-page-header .navbar-brand {
+        padding-top: 1.2em;
+        min-height: 50%;
 }
 
 @media (max-width: 1000px) {
@@ -133,7 +151,7 @@ body.dark p, li, .auth-options li a {
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0em;
 }
 svg {
   display: block;
@@ -258,15 +276,16 @@ svg {
 }
 .slide:nth-child(1) .slide__bg {
   left: 0;
-  background-image: url("../img/hero/mural.jpg");
+  background-image: url("../img/hero/slide1b.png");
+  background-position: bottom center;
   background-size: cover;
 }
 .slide:nth-child(1) .slide__overlay-path {
-  fill: #fff;
+  fill: #011140;
 }
 @media (max-width: 991px) {
   .slide:nth-child(1) .slide__text {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 38, 127, 0.8);
       }
 }
 .slide:nth-child(2) {
@@ -274,14 +293,14 @@ svg {
 }
 .slide:nth-child(2) .slide__bg {
   left: -50%;
-  background-image: url("../img/hero/synagogue.jpg");
+  background-image: url("../img/hero/slide2a.png");
 }
 .slide:nth-child(2) .slide__overlay-path {
-  fill: #C69200;
+  fill: #011140;
 }
 @media (max-width: 991px) {
   .slide:nth-child(2) .slide__text {
-    background-color: rgba(198, 146, 0, 0.8);
+    background-color: rgba(0, 38, 127, 0.8);
   }
 }
 .slide:nth-child(3) {
@@ -289,30 +308,36 @@ svg {
 }
 .slide:nth-child(3) .slide__bg {
   left: -100%;
-  background-image: url("../img/hero/rihanna.jpg");
+  background-image: url("../img/hero/slide3a.png");
 }
 .slide:nth-child(3) .slide__overlay-path {
-  fill: #B3CFEC;
+  fill: #011140;
 }
 @media (max-width: 991px) {
   .slide:nth-child(3) .slide__text {
-    background-color: rgba(179, 207, 236, 0.8);
-  }
+    background-color: rgba(0, 38, 127, 0.8);
+    background-position:right
+    }
+    .slide:nth-child(3) .slide__bg {
+    background-position: right center;
+    }
 }
-
 .slide:nth-child(4) {
   left: 300%;
 }
 .slide:nth-child(4) .slide__bg {
   left: -150%;
-  background-image: url("../img/hero/cricket2.jpg");
+  background-image: url("../img/hero/slide4a.png");
 }
 .slide:nth-child(4) .slide__overlay-path {
-  fill: #cbc6c3;
+  fill: #011140;
 }
 @media (max-width: 991px) {
   .slide:nth-child(4) .slide__text {
-    background-color: rgba(203, 198, 195, 0.8);
+    background-color: rgba(0, 38, 127, 0.8);
+  }
+  .slide:nth-child(4) .slide__bg {
+    background-position: left center;
   }
 }
 
@@ -321,30 +346,15 @@ svg {
 }
 .slide:nth-child(5) .slide__bg {
   left: -200%;
-  background-image: url("../img/hero/rockhall.jpg");
+  background-image: url("../img/hero/slide5b.png");
+  background-position: center; 
 }
 .slide:nth-child(5) .slide__overlay-path {
-  fill: #cbc6c3;
+  fill: #011140;
 }
 @media (max-width: 991px) {
   .slide:nth-child(5) .slide__text {
-    background-color: rgba(203, 198, 195, 0.8);
-  }
-}
-
-.slide:nth-child(6) {
-  left: 500%;
-}
-.slide:nth-child(6) .slide__bg {
-  left: -250%;
-  background-image: url("../img/hero/beach.jpg");
-}
-.slide:nth-child(6) .slide__overlay-path {
-  fill: #cbc6c3;
-}
-@media (max-width: 991px) {
-  .slide:nth-child(6) .slide__text {
-    background-color: rgba(203, 198, 195, 0.8);
+    background-color: rgba(0, 38, 127, 0.8);
   }
 }
 
@@ -407,18 +417,22 @@ svg {
   }
 }
 .slide__text-heading {
-	font-size: 2.0em;
+	font-size: 3.157em;
 	font-weight: 900;
+    color: white;
 	line-height: normal;
 }
+    
 @media (max-width: 991px) {
   .slide__text-heading {
     line-height: normal;
-    font-size: 1.3em;
+    font-size: 2em;
   }
 }
 .slide__text-desc {
-	font-size: 1.2em;
+	font-size: 1em;
+    color: white;
+    text-align: left;
 }
 @media (max-width: 991px) {
   .slide__text-desc {
@@ -430,35 +444,23 @@ svg {
 	border: none;
 }
 
-/******************************************************/
-/*		ABOUT					  */
-/******************************************************/
-
-.content-lg {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-.title-v1 p {
-    font-size: 1.2em;
-    font-weight: 200;
-
 
 /******************************************************/
 /*		FAQ						  */
 /******************************************************/
 
 .service-block-default, .service-block-light {
-    background: #fafafa;
-    padding: 10px;
-    border: 2px solid #a5a5a5;
+    background: #e1e1e1;
+    padding: 25px;
+    border: 1px solid #595959;
 }
 
 .service-block h2.heading-md, .service-block li {
   color: black;
+  font-weight:900;
 }
 .service-block li {
-    font-family: "Crimson Text", Serif;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-left: 20px;
 }
 
@@ -468,8 +470,13 @@ svg {
 }
 
 .service-block p {
-    font-size: 1.2em;
+    font-size: 1em;
+    color: black;
 }
+.service-block h1 {
+    font-weight: 900;
+}
+
 .title-v1 {margin-top:60px;}
     
 .service-block ol, .service-block ul {
@@ -480,14 +487,15 @@ svg {
 /*		Contact							  */
 /******************************************************/
 .content-lg {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top:  0px;
+    padding-bottom: 35px;
+}
 
 .title-v1 h1:after, .title-v1 h2:after, i.icon-bg-u {
 	background-color: #21438D;
 }
 p {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
         
     }    
@@ -519,8 +527,16 @@ footer.social-section {
     
 .page-scroll a {
 	color: white;
-	font-size: 2em;
+	font-size: 1em;
 }
 .page-scroll a:hover {
-	color: #FAE648;
+	color: #FFC726;
+}
+
+/******************************************************/
+/*		Login/auth page								  */
+/******************************************************/
+
+.img-login {
+    background-image: url(../img/photos/barbadosbea2.jpg);
 }

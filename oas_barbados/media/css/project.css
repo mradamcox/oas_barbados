@@ -151,3 +151,22 @@
         color: #454545
     }
 }
+/******************************************************/
+/*		Login/auth page								  */
+/******************************************************/
+
+.img-login {
+    background-image: url(../img/photos/barbadosbea2.jpg);
+}
+
+/******************************************************/
+/*		Profile Manager						  */
+/******************************************************/
+
+.profile-summary-page .img-responsive {
+	max-height: 249px;
+    }
+
+.widget-bg img-responsive {
+    background-image: url(../img/photos/btown.png);
+}

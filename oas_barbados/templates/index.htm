@@ -57,6 +57,7 @@ If not, see <http://www.gnu.org/licenses/>.
     <link href="{% static 'css/unify.css' %}" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="{static 'css/custom.css' %}"
     
 </head>
 
@@ -150,25 +151,25 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 <div class="slide__bg"></div>
                 <div class="slide__content">
 				    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-				        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-				</svg>
-				<div class="slide__text">
-                      <h2 class="slide__text-heading">Proud Symbols of Struggle, Enterprise and Culture</h2>
+				        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" </path>
+				    </svg>
+				    <div class="slide__text">
+                      <h2 class="slide__text-heading">Symbols of Struggle, Enterprise and Culture</h2>
                       <p class="slide__text-desc">Discover the sites, buildings and landscapes linked to Barbados' history and cultural heritage.</p>
                       <a class="btn btn-primary" href="#" role="button">Explore the Map</a>
                       <a class="btn btn-primary" href="#" role="button">Learn more</a>
-				</div>
+				    </div>
 			    </div>
              </div>
              <div class="slide slide-1">
-                  <div class="slide__bg"></div>
-                  <div class="slide__content">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
                     <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                      <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                      <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"> </path>
                     </svg>
                     <div class="slide__text">
                       <h2 class="slide__text-heading">A Rich, Shared Heritage </h2>
-                      <p class="slide__text-desc">Barbados’ heritage reflects the cultural traditions of the various socio – cultural groups that settled in the island and have helped to craft a unique Bajan identity.</p>
+                      <p class="slide__text-desc">Barbados’ heritage reflects the cultural traditions of the various socio–cultural groups that settled in the island and have helped to craft a unique Bajan identity.</p>
                       <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
                       <a class="btn btn-primary" href="#" role="button">Learn More</a>
                     </div>
@@ -195,7 +196,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                       <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                     </svg>
                     <div class="slide__text">
-                      <h2 class="slide__text-heading">The Rich Legacy of Barbadian Cricket</h2>
+                      <h2 class="slide__text-heading">The Proud Legacy of Barbadian Cricket</h2>
                       <p class="slide__text-desc">Explore the cricket grounds, fields, beaches and ‘pasteurs’ where many of Barbados' cricket legends have honed their craft. The tradition of playing cricket, dating back to the British colonial era, continues as a national pastime today.</p>
                       <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
                       <a class="btn btn-primary" href="#" role="button">Learn more</a>
@@ -216,34 +217,21 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     </div>
                   </div>
                 </div>
-                <div class="slide slide-5">
-                  <div class="slide__bg"></div>
-                  <div class="slide__content">
-                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                      <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                    </svg>
-                    <div class="slide__text">
-                      <h2 class="slide__text-heading">Beauty abounds</h2>
-                      <p class="slide__text-desc">Explore places of  beauty that also served as places for social engagement for Bajan families  during the 1950s to 1970s.</p>
-                      <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
-                      <a class="btn btn-primary" href="#" role="button">Learn more</a>
-                    </div>
-                  </div>
-                </div>
-          </div>
+                
+        </div>
     </div>
        <!--  About Section -->
     <section class="about-section section-first" style="padding-top: 0px;">
         <div id="about" class="about-image" style="background-color: #e9f1fa; padding: 0px;">
-            <div class="container" style=padding: 0px;>
+            <div class="container">
                 <div class="title-v1">
                     <h1>{% trans "About" %}</h1>
-                    <p>Discover the many fascinating traces of our shared history and culture on this interactive site.</p>
-					<p>Managed by the Barbados Ministry of Creative Economy, Culture and Sports this interactive site represents an ongoing project of inventorying every place of heritage significance in the country—and documenting the people, events, and memories embodied in each. Visit often to explore sites of both famous and hidden heritage—and watch the map grow!</p>
+                    <p style="text-align:left; font-size: 1em;">Discover the many fascinating traces of our shared history and culture on this interactive site.>Discover the many fascinating traces of our shared history and culture on this interactive site.</p>
+					<p style="text-align: left; font-size: 1em;">Managed by the Barbados Ministry of Creative Economy, Culture and Sports this interactive site represents an ongoing project of inventorying every place of heritage significance in the country—and documenting the people, events, and memories embodied in each. Visit often to explore sites of both famous and hidden heritage—and watch the map grow!</p>
 					
-					<p>The Barbados National Registry of Historic Places is the result of a cooperative initiative of the Barbados Government and the <a href="http://www.oas.org/en/">Organization of American States</a> and was funded by the <a href="https://usoas.usmission.gov/">U.S. Mission to the Organization of American States.</a></p>
+					<p style="text-align: left; font-size: 1em;">The Barbados National Registry of Historic Places is the result of a cooperative initiative of the Barbados Government and the <a href="http://www.oas.org/en/">Organization of American States</a> and was funded by the <a href="https://usoas.usmission.gov/">U.S. Mission to the Organization of American States.</a></p>
 					
-					<p>The software powering the National Registry is <a href="https://www.archesproject.org/">Arches</a>, an open source heritage management system designed for built heritage by the <a href="http://www.getty.edu/">Getty Institute</a> and the <a href="https://www.wmf.org/">World Monuments Fund</a>. This Barbados instance of Arches was installed by <a href="https://www.legiongis.com/">Legion GIS LLC</a>. Branding, customization, and training was provided by <a href="http://coherit.com/">Coherit Associates LLC.</a></p>
+					<p style="text-align: left; font-size: 1em;">The software powering the National Registry is <a href="https://www.archesproject.org/">Arches</a>, an open source heritage management system designed for built heritage by the <a href="http://www.getty.edu/">Getty Institute</a> and the <a href="https://www.wmf.org/">World Monuments Fund</a>. This Barbados instance of Arches was installed by <a href="https://www.legiongis.com/">Legion GIS LLC</a>. Branding, customization, and training was provided by <a href="http://coherit.com/">Coherit Associates LLC.</a></p>
                 </div>
             </div>
         </div>
@@ -261,7 +249,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-clipboard-list"></i>
                         <h1 class="heading-md">{% trans "Why is it important to maintain an Inventory of Heritage Places?" %}</h1>
-                        <p style="text-align: left; font-size:1.2em;">Over the years Barbados has lost a large number of historic buildings, objects and structures due to development, decay, man-made and natural disasters and a lack of awareness of the importance of historic places to national identity and development. Our communities contain a wealth of heritage assets that are yet to  explored and documented. Heritage serves as a valuable resource to build national identity and pride, for community engagement and to contribute to national development. This register serves as a means to build awareness and to document and preserve places of historic, socio-cultural, religious significance for future generations. Communities will be encouraged to nominate places of interest to the Register. Each site listed on the Register will be enhanced with oral histories, photos, video, maps and pictures, interviews and rich stories from communities and historians.</p>
+                        <p style="text-align: left;">Over the years Barbados has lost a large number of historic buildings, objects and structures due to development, decay, man-made and natural disasters and a lack of awareness of the importance of historic places to national identity and development. Our communities contain a wealth of heritage assets that are yet to  explored and documented. Heritage serves as a valuable resource to build national identity and pride, for community engagement and to contribute to national development. This register serves as a means to build awareness and to document and preserve places of historic, socio-cultural, religious significance for future generations. Communities will be encouraged to nominate places of interest to the Register. Each site listed on the Register will be enhanced with oral histories, photos, video, maps and pictures, interviews and rich stories from communities and historians.</p>
                     </div>
                 </div>
                 <div class="grid-sizer col-xs-12 col-md-4"></div>
@@ -269,42 +257,42 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-university"></i>
                         <h1 class="heading-md">{% trans "What qualifies a place, object, structure, or building to be listed on the National Register?" %}</h1>
-                        <p style="text-align: left; font-size:1.2em;">The site, building, structure or object must be associated with a specific period in Barbados’ history and or associated with an important person or historical, social or cultural event that helped to shape Barbados.</p>
+                        <p style="text-align: left;">The site, building, structure or object must be associated with a specific period in Barbados’ history and or associated with an important person or historical, social or cultural event that helped to shape Barbados.</p>
                     </div>    
                 </div>
                 <div class="grid-sizer col-xs-12 col-md-4"></div>
                 <div class="grid-item col-xs-12 col-md-4">
                     <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-file-export"></i>
-                        <h1 class="heading-md">{% trans "What is the process for nominating sites, buildings, structures, and objects to the Register?" %}</h1>
-                        <p style="text-align: left; font-size:1.2em;">Members of the public can complete a nomination form or call into the Ministry of Creative Economy, Culture and Sports to nominate a site, building, structure or object that they consider to be on historical, religious, cultural or social significance to a community and to Barbados.</p>
-                        <p style="text-align: left; font-size:1.2em;">All nominations must be clearly written or typed. The Technical Review Committee will make a scheduled visit the location and conduct an assessment. The nomination is then reviewed by the Technical Review Committee at their regularly scheduled meetings, where a decision will be taken against the stated criteria.</p>
-                        <p style="text-align: left; font-size:1.2em;">Staff of the Ministry of Creative Economy, Culture and Sports and The Technical Review Committee are available to assist with the initial assessments of eligibility of sites to the register and to provide guidance in the completion of nominations.</p>
-                        <p style="text-align: left; font-size:1.2em;">Private property owners have the right to consent to, or object to, the listing of their property.</p>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "What is the process for nominating sites, buildings, structures, and objects to the Register?" %}</h1>
+                        <p style="text-align: left;"style="color:black;">Members of the public can complete a nomination form or call into the Ministry of Creative Economy, Culture and Sports to nominate a site, building, structure or object that they consider to be on historical, religious, cultural or social significance to a community and to Barbados.</p>
+                        <p style="text-align: left;">All nominations must be clearly written or typed. The Technical Review Committee will make a scheduled visit the location and conduct an assessment. The nomination is then reviewed by the Technical Review Committee at their regularly scheduled meetings, where a decision will be taken against the stated criteria.</p>
+                        <p style="text-align: left;">Staff of the Ministry of Creative Economy, Culture and Sports and The Technical Review Committee are available to assist with the initial assessments of eligibility of sites to the register and to provide guidance in the completion of nominations.</p>
+                        <p style="text-align: left;">Private property owners have the right to consent to, or object to, the listing of their property.</p>
                     </div>
                 </div>
                 <div class="grid-sizer col-xs-12 col-md-4"></div>
                 <div class="grid-item col-xs-12 col-md-4">
                     <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-award"></i>
-                        <h1 class="heading-md">{% trans "How will the public be notified of a successful nomination?" %}</h1>
-                        <p style="text-align: left; font-size:1.2em;">Property owners and nomination authors will be notified of The Technical Review Committee’s decision. Owners of properties listed on The Register will receive a certificate of listing. Formal public notice of the sites, buildings, structures and objects will be published in the local newspaper annually and posted to social media.</p>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "How will the public be notified of a successful nomination?" %}</h1>
+                        <p style="text-align: left; color: black;">Property owners and nomination authors will be notified of The Technical Review Committee’s decision. Owners of properties listed on The Register will receive a certificate of listing. Formal public notice of the sites, buildings, structures and objects will be published in the local newspaper annually and posted to social media.</p>
                     </div>
                 </div>
                 <div class="grid-sizer col-xs-12 col-md-4"></div>
                 <div class="grid-item col-xs-12 col-md-4">
                     <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-chalkboard-teacher"></i>
-                        <h1 class="heading-md">{% trans "Who manages the Register?" %}</h1>
-                        <p style="text-align: left; font-size:1.2em;">The National Register is managed by the Ministry of Creative Economy, Culture and Sports, which is responsible for the preservation of Barbados’ tangible and intangible heritage.  A  Technical Review Committee has been established  to oversee the nomination process. This Committee comprises Lands and Surveys Department, Data Processing Department, National Cultural Foundation, The Barbados Museum and Historical Society, Town and Country Development Planning Officer, Barbados Tourism Marketing Inc., The Barbados Archives and Barbados National Trust and private citizens with a love of heritage.  Local historians act as resource personnel.</p>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "Who manages the Register?" %}</h1>
+                        <p style="text-align: left; color: black;">The National Register is managed by the Ministry of Creative Economy, Culture and Sports, which is responsible for the preservation of Barbados’ tangible and intangible heritage.  A  Technical Review Committee has been established  to oversee the nomination process. This Committee comprises Lands and Surveys Department, Data Processing Department, National Cultural Foundation, The Barbados Museum and Historical Society, Town and Country Development Planning Officer, Barbados Tourism Marketing Inc., The Barbados Archives and Barbados National Trust and private citizens with a love of heritage.  Local historians act as resource personnel.</p>
                     </div>
                 </div>
                 <div class="grid-sizer col-xs-12 col-md-4"></div>
                 <div class="grid-item col-xs-12 col-md-4">
                     <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-users"></i>
-                        <h1 class="heading-md">{% trans "Who are the beneficiaries?" %}</h1>
-                        <p style="text-align: left; font-size:1.2em;">It will be a valuable resource for heritage professionals, researchers, communities, planners, developers, Barbadians living in the Diaspora, Students, Heritage Professionals, Educators, Tourism Professionals, Community groups, Historians, Government departments; NGOs, Special Interest groups and policy makers.</p>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "Who are the beneficiaries?" %}</h1>
+                        <p style="text-align: left;" "color:black;">It will be a valuable resource for heritage professionals, researchers, communities, planners, developers, Barbadians living in the Diaspora, Students, Heritage Professionals, Educators, Tourism Professionals, Community groups, Historians, Government departments; NGOs, Special Interest groups and policy makers.</p>
                     </div>
                 </div>
             </div>
@@ -313,17 +301,17 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- End FAQ Section -->
 
     <!-- Contact Section -->
-    <section id="contact" style="background-color: #FAE648; text-align: center; padding-bottom: 45px;">
+    <section id="contact" style="background-color: #FFC726; text-align: center; padding-bottom: 45px;">
         <div class="container content-lg text-center">
             <div class="title-v1" style=padding-top: 50px>
                 <h2>{% trans "Contact Us" %}</h2>
             </div>
                 <h2>Coordinator:</h2>
-                <p style="font-size:1.2em;">Dr Sheron Johnson<br>Ministry of Creative Economy, Culture and Sports<br><a href="mailto:sheron.johnson@barbados.gov.bb">sheron.johnson@barbados.gov.bb</a><br>(246) 535-5858</p> 
+                <p>Dr Sheron Johnson<br>Ministry of Creative Economy, Culture and Sports<br><a href="mailto:sheron.johnson@barbados.gov.bb">sheron.johnson@barbados.gov.bb</a><br>(246) 535-5858</p> 
 
                 <h2>Technical Review Members:</h2>
-                <p style="font-size:1.2em;">Ms Terry Vanderpool-Fox<br>Barbados Tourism Marketing Inc.<br><a href="mail to:terryv@visitbarbados.org">terry@visitbarbados.org</a><br>(246) 535-3700</p>
-                <p style="font-size:1.2em;">Ms Sharon Trotman<br><a href="mailto:trudehornpipe@gmail.com">trudehornpipe@gmail.com</a></p>
+                <p>Ms Terry Vanderpool-Fox<br>Barbados Tourism Marketing Inc.<br><a href="mail to:terryv@visitbarbados.org">terry@visitbarbados.org</a><br>(246) 535-3700</p>
+                <p>Ms Sharon Trotman<br><a href="mailto:trudehornpipe@gmail.com">trudehornpipe@gmail.com</a></p>
         </div>
     </section>
             <!-- End Contact Section -->
@@ -331,7 +319,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- Social Section -->
     <section>
         <footer class="social-section" style="background-color: #21438D; color: white; text-align: center; padding: 15px;">
-            <p style="color:white;">{{copyright_year}} &copy; {{copyright_text}} </p>
+            <p style="color:white;">Copyright &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
             <p style="color:white;">Barbados Ministry of Creative Economy, Culture and Sports</p>
         </footer>
     </section>
