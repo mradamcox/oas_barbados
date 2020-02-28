@@ -436,6 +436,7 @@ svg {
     color: white;
 	line-height: normal;
 }
+    
 @media (max-width: 991px) {
   .slide__text-heading {
     line-height: normal;
