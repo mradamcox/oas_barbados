@@ -13,8 +13,8 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU Affero General Public License for more details.
 
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU Affero General Public License along with this program. 
+If not, see <http://www.gnu.org/licenses/>.
 -->
 {% load staticfiles %}
 {% load template_tags %}
@@ -28,11 +28,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 <head>
     <title>{{app_title}}</title>
-
-    <!-- Meta -->
+    
+<!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
+    <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Technical Consultant: Angela M. Labrador, Coherit Associates">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/fav/apple-icon-57x57.png' %}">
@@ -49,15 +50,15 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/fav/favicon-96x96.png' %}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/fav/favicon-16x16.png' %}">
 	<link rel="manifest" href="{% static 'img/fav/manifest.json' %}">
-	<meta name="theme-color" content="#ffffff">
+	
 
 	<link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,700" rel="stylesheet">    
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
-
     <link href="{% static 'css/unify.css' %}" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="{static 'css/custom.css' %}"
+    
 </head>
 
 <!--
@@ -66,11 +67,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 -->
 
 <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
-
-    <!--=== Header ===-->
+<!--=== Navbar Header ===-->    
     <nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-
             <div class="menu-container page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">{% trans "Toggle navigation" %}</span>
@@ -83,11 +82,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <img src="{% static 'img/bbnrhp_logo_line.png' %}" alt="Logo">
                 </a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
+<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <div class="menu-container">
-                    <ul class="nav navbar-nav">
+<!-- container -->                
+                 <div class="menu-container">
+<!-- /.navbar-collapse -->                
+                     <ul class="nav navbar-nav">
                         <li class="page-scroll">
                             <a href="#about">{% trans "About" %}</a>
                         </li>
@@ -120,121 +120,187 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 {% trans "Welcome" %} {{ user.first_name|default:user.username }}
                             </a>
                             <span class="fa fa-chevron-circle-down auth-options" data-bind="click: function(){showAuthMenu(!showAuthMenu())}"></span>
-
                             {% endif %}
-                        </li>
                         <!-- ko if: showAuthMenu -->
-                        <ul class="auth-options">
-                            <li><a href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">{% trans 'Logout' %}</a></li>
-                            <li><a href="{% url 'user_profile_manager' %}">{% trans 'User Profile' %}</a></li>
+                        <ul class="auth-options" id="auth-submenu">
+                            <li>
+                                <a href="{% url 'auth' %}?next={% url 'home' %}{% if user.username != 'anonymous' %}&logout=true{% endif %}">{% trans 'Logout' %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'user_profile_manager' %}">{% trans 'User Profile' %}</a>
+                            </li>
                         </ul>
-                        <!-- /ko -->
-                    </ul>
+            <!-- /ko -->         
+                    </li>
+                </ul>
+            </div>
+                
+      <!-- /.navbar-collapse --> 
+                
+        </div>
+        </div>
+    </nav>
+<!--=== End Header ===-->
+<!-- New Hero -->
+    <div class="slider-container">
+        <div class="slider-control left inactive"></div>
+		<div class="slider-control right"></div>
+            <ul class="slider-pagi"></ul>
+        <div class="slider">
+            <div class="slide slide-0 active">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    
+				    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+				        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" </path>
+				    </svg>
+				    <div class="slide__text">
+                      <h2 class="slide__text-heading">Symbols of Struggle, Enterprise and Culture</h2>
+                      <p class="slide__text-desc">Discover the sites, buildings and landscapes linked to Barbados' history and cultural heritage.</p>
+                      <a class="btn btn-primary" href="#" role="button">Explore the Map</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn more</a>
+				    </div>
+				    <div class="slide__photocredit">
+                      <span><a style="color:white" href="https://www.flickr.com/photos/59650561@N08/" target="_blank">Photo: Shardalow</a><a style="color:white" href="https://creativecommons.org/licenses/by-nc-nd/2.0"> CC BY-NC-ND 2.0</a></span>
+                    </div>   
+			    </div>
+             </div>
+             <div class="slide slide-1">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <div class="slide__photocredit">
+                      <span><a style="color:white" href="https://www.flickr.com/photos/photosak" target="_blank">Photo: Sue Kellerman</a><a style="color:white" href="https://creativecommons.org/licenses/by-nc-nd/2.0"> CC BY-NC-ND 2.0</a></span>
+                    </div>      
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"> </path>
+                    </svg>
+                    <div class="slide__text">
+                      <h2 class="slide__text-heading">A Rich, Shared Heritage </h2>
+                      <p class="slide__text-desc">Barbados’ heritage reflects the cultural traditions of the various socio–cultural groups that settled in the island and have helped to craft a unique Bajan identity.</p>
+                      <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn More</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <div class="slide__photocredit">
+                        <p style="width:350px"><a style="color:white; left:80%" href="https://www.flickr.com/photos/nationalarchives/8022847929/in/gallery-92586543@N02-72157632614776758/" target="_blank">Photo: The National Archives UK</a></p>
+                    </div>   
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                      <h2 class="slide__text-heading">A Heritage of Creativity</h2>
+                      <p class="slide__text-desc">From as far back as the 1950’s Barbados' music sector has had a profound impact on the Caribbean and the world. Explore sites linked to musical icons that have transformed Barbados’ cultural landscape.</p>
+                      <a class="btn btn-primary" href="#" role="button">Search the Register</a>
+                      <a class="btn btn-primary" href="#" role="button">Nominate</a>
+                    </div>
                 </div>
             </div>
-            <!-- /.navbar-collapse -->
+            <div class="slide slide-3">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice"><path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" /></svg>
+                    <div class="slide__text">
+                      <h2 class="slide__text-heading">The Proud Legacy of Barbadian Cricket</h2>
+                      <p class="slide__text-desc">Explore the cricket grounds, fields, beaches and ‘pasteurs’ where many of Barbados' cricket legends have honed their craft. The tradition of playing cricket, dating back to the British colonial era, continues as a national pastime today.</p>
+                      <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn more</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="slide slide-4">
+                  <div class="slide__bg"></div>
+                  <div class="slide__content">
+                    <div class="slide__photocredit">
+                      <span><a style="color: white" href="https://www.flickr.com/photos/photosak" target="_blank">Photo: Pgbk1987</a><a style="color:white" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en"> CC BY-SA 3.0</a></span>
+                    </div>   
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice"><path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" /></svg>
+                    <div class="slide__text">
+                      <h2 class="slide__text-heading">Fitting Tributes and National Monuments</h2>
+                      <p class="slide__text-desc">Throughout Barbados are many monuments that hear witness to significant achievements  of Barbadians including those related to Emancipation and the struggle for independence. </p>
+                      <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn more</a>
+                    </div>
+                    </div>
+             </div>
         </div>
-        <!-- /.container -->
-    </nav>
-    <!--=== End Header ===-->
-
-	<!-- New Hero -->
-	 <div class="slider-container">
-		  <div class="slider-control left inactive"></div>
-		  <div class="slider-control right"></div>
-		  <ul class="slider-pagi"></ul>
-		  <div class="slider">
-			<div class="slide slide-0 active">
-			  <div class="slide__bg"></div>
-			  <div class="slide__content">
-				<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-				  <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-				</svg>
-				<div class="slide__text">
-				  <h2 class="slide__text-heading">Our Past and Our Future</h2>
-				  <p class="slide__text-desc">Our heritage is a precious legacy, embodying the memories and achievements of many peoples. We live our heritage everyday in the places we live and work, celebrate and mourn. Heritage is an evolving pattern on the landscape that illustrates our course from past to present and from present to future.</p>
-				  <a class="btn btn-primary" href="#" role="button">Discover our Heritage</a>
-				  <a class="btn btn-primary" href="#" role="button">Learn more</a>
-				</div>
-			  </div>
-			</div>
-			<div class="slide slide-1 ">
-			  <div class="slide__bg"></div>
-			  <div class="slide__content">
-				<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-				  <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-				</svg>
-				<div class="slide__text">
-				  <h2 class="slide__text-heading">The Heritage of Every Barbadian</h2>
-				  <p class="slide__text-desc">Barbados’s past has left many traces of the peoples who have lived, settled, and struggled for survival and dignity over the centuries. Forts, churches, and great houses are only a small part of the mosaic of our heritage. Discover the rich variety of historic places, people, and events from our past that still affect us today.</p>
-				  <a class="btn btn-primary" href="#" role="button">Explore the Map</a>
-				  <a class="btn btn-primary" href="#" role="button">Learn more</a>
-				  </div>
-			  </div>
-			</div>
-			<div class="slide slide-2">
-			  <div class="slide__bg"></div>
-			  <div class="slide__content">
-				<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-				  <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-				</svg>
-				<div class="slide__text">
-				  <h2 class="slide__text-heading">Explore the Heritage of Barbados</h2>
-				  <p class="slide__text-desc">Surprising discoveries await you in the cities, settlements, shoreline, and countryside of the island. Each is a unique expression of Bajan identity, closely linked to other places, people, and memories. What are the connections that bind Bajan heritage? What special places do you want recognized?</p>
-				  <a class="btn btn-primary" href="#" role="button">Search the Register</a>
-				  <a class="btn btn-primary" href="#" role="button">Nominate</a>
-
-				</div>
-			  </div>
-			</div>
-		</div>
-
-    <!--  About Section -->
+    </div>
+       <!--  About Section -->
     <section class="about-section section-first" style="padding-top: 0px;">
-        <div id="about" class="about-image" style="background-color: #e9f1fa;">
+        <div id="about" class="about-image" style="background-color: #e9f1fa; padding: 0px;">
             <div class="container">
                 <div class="title-v1">
                     <h1>{% trans "About" %}</h1>
-                    <p>Discover the many fascinating traces of our shared history and culture on this interactive site.</p>
-					<p>Managed by the Barbados Ministry of Creative Economy, Culture and Sports this interactive site represents an ongoing project of inventorying every place of heritage significance in the country—and documenting the people, events, and memories embodied in each. Visit often to explore sites of both famous and hidden heritage—and watch the map grow!</p>
+                    <p style="text-align:left; font-size: 1em;">Discover the many fascinating traces of our shared history and culture on this interactive site.>Discover the many fascinating traces of our shared history and culture on this interactive site.</p>
+					<p style="text-align: left; font-size: 1em;">Managed by the Barbados Ministry of Creative Economy, Culture and Sports this interactive site represents an ongoing project of inventorying every place of heritage significance in the country—and documenting the people, events, and memories embodied in each. Visit often to explore sites of both famous and hidden heritage—and watch the map grow!</p>
 					
-					<p>The Barbados National Registry of Historic Places is the result of a cooperative initiative of the Barbados Government and the <a href="http://www.oas.org/en/">Organization of American States</a> and was funded by the <a href="https://usoas.usmission.gov/">U.S. Mission to the Organization of American States.</a></p>
+					<p style="text-align: left; font-size: 1em;">The Barbados National Registry of Historic Places is the result of a cooperative initiative of the Barbados Government and the <a href="http://www.oas.org/en/">Organization of American States</a> and was funded by the <a href="https://usoas.usmission.gov/">U.S. Mission to the Organization of American States.</a></p>
 					
-					<p>The software powering the National Registry is <a href="https://www.archesproject.org/">Arches</a>, an open source heritage management system designed for built heritage by the <a href="http://www.getty.edu/">Getty Institute</a> and the <a href="https://www.wmf.org/">World Monuments Fund</a>. This Barbados instance of Arches was installed by <a href="https://www.legiongis.com/">Legion GIS LLC</a>. Branding, customization, and training was provided by <a href="http://coherit.com/">Coherit Associates LLC.</a></p>
+					<p style="text-align: left; font-size: 1em;">The software powering the National Registry is <a href="https://www.archesproject.org/">Arches</a>, an open source heritage management system designed for built heritage by the <a href="http://www.getty.edu/">Getty Institute</a> and the <a href="https://www.wmf.org/">World Monuments Fund</a>. This Barbados instance of Arches was installed by <a href="https://www.legiongis.com/">Legion GIS LLC</a>. Branding, customization, and training was provided by <a href="http://coherit.com/">Coherit Associates LLC.</a></p>
                 </div>
             </div>
         </div>
     </section>
-    <!--  About Section -->
-
-    <!-- FAQ Section -->
+ <!-- End About Section -->
+ <!-- FAQ Section -->
     <section id="faq">
-        <div class="container content-lg">
-            <div class="title-v1">
-                <h2>{% trans "Frequently Asked Questions" %}</h2>
-            </div>
-
-            <div class="row service-box-v1">
-                <div class="col-md-4 col-sm-6">
-                    <div class="service-block service-block-default">
+        <div class="title-v1">
+            <h2 style="color: black">{% trans "Frequently Asked Questions" %}</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="grid">
+                <div class="grid-sizer col-xs-12 col-md-4"></div>
+                <div class="grid-item col-xs-12 col-md-4">
+                    <div class="service-block service-block-default grid-item-content">
                         <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-clipboard-list"></i>
-                        <h2 class="heading-md">{% trans "Why a Register?" %}</h2>
-                        <p>Time, decay, and modern development are inevitable threats to the survival of places and traces of Barbados’s past. And yet heritages places are a valuable resource that need to be identified and documented. Which are the places too significant to lose forever? And which are the places that should be remembered after they are gone. The goal is to provide a detailed record of significant sites across the country that are worth protecting or remembering—and passing on to generations yet to come.</p>
+                        <h1 class="heading-md">{% trans "Why is it important to maintain an Inventory of Heritage Places?" %}</h1>
+                        <p style="text-align: left;">Over the years Barbados has lost a large number of historic buildings, objects and structures due to development, decay, man-made and natural disasters and a lack of awareness of the importance of historic places to national identity and development. Our communities contain a wealth of heritage assets that are yet to  explored and documented. Heritage serves as a valuable resource to build national identity and pride, for community engagement and to contribute to national development. This register serves as a means to build awareness and to document and preserve places of historic, socio-cultural, religious significance for future generations. Communities will be encouraged to nominate places of interest to the Register. Each site listed on the Register will be enhanced with oral histories, photos, video, maps and pictures, interviews and rich stories from communities and historians.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="service-block service-block-default">
-                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-check"></i>
-                        <h2 class="heading-md">{% trans "What Qualifies?" %}</h2>
-                        <p>Eligibility for inclusion on the Barbados Register of Historic Places is based on a range of different aspects of significance—aspects that resonate with all of us. Sites connected with historic events, personalities, practices, beliefs, and traditions; archaeological remains that can reveal the lifeways of past communities; and natural sites of exceptional beauty and ecological or scientific value, are all candidates for nomination to the Register.</p>
+                <div class="grid-sizer col-xs-12 col-md-4"></div>
+                <div class="grid-item col-xs-12 col-md-4">
+                    <div class="service-block service-block-default grid-item-content">
+                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-university"></i>
+                        <h1 class="heading-md">{% trans "What qualifies a place, object, structure, or building to be listed on the National Register?" %}</h1>
+                        <p style="text-align: left;">The site, building, structure or object must be associated with a specific period in Barbados’ history and or associated with an important person or historical, social or cultural event that helped to shape Barbados.</p>
+                    </div>    
+                </div>
+                <div class="grid-sizer col-xs-12 col-md-4"></div>
+                <div class="grid-item col-xs-12 col-md-4">
+                    <div class="service-block service-block-default grid-item-content">
+                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-file-export"></i>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "What is the process for nominating sites, buildings, structures, and objects to the Register?" %}</h1>
+                        <p style="text-align: left;"style="color:black;">Members of the public can complete a nomination form or call into the Ministry of Creative Economy, Culture and Sports to nominate a site, building, structure or object that they consider to be on historical, religious, cultural or social significance to a community and to Barbados.</p>
+                        <p style="text-align: left;">All nominations must be clearly written or typed. The Technical Review Committee will make a scheduled visit the location and conduct an assessment. The nomination is then reviewed by the Technical Review Committee at their regularly scheduled meetings, where a decision will be taken against the stated criteria.</p>
+                        <p style="text-align: left;">Staff of the Ministry of Creative Economy, Culture and Sports and The Technical Review Committee are available to assist with the initial assessments of eligibility of sites to the register and to provide guidance in the completion of nominations.</p>
+                        <p style="text-align: left;">Private property owners have the right to consent to, or object to, the listing of their property.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="service-block service-block-default">
-                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-thumbs-up"></i>
-                        <h2 class="heading-md">{% trans "How Can I Nominate a Site?" %}</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis sodales mi, nec eleifend ante. Pellentesque rhoncus lorem odio, id fermentum nulla condimentum ac. Etiam placerat sem in elit placerat, quis auctor nisl mollis. Etiam quis sodales augue. Duis gravida accumsan pretium. Maecenas ultricies enim eget tincidunt bibendum. Integer tristique dapibus efficitur.</p>
-                       
+                <div class="grid-sizer col-xs-12 col-md-4"></div>
+                <div class="grid-item col-xs-12 col-md-4">
+                    <div class="service-block service-block-default grid-item-content">
+                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-award"></i>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "How will the public be notified of a successful nomination?" %}</h1>
+                        <p style="text-align: left; color: black;">Property owners and nomination authors will be notified of The Technical Review Committee’s decision. Owners of properties listed on The Register will receive a certificate of listing. Formal public notice of the sites, buildings, structures and objects will be published in the local newspaper annually and posted to social media.</p>
+                    </div>
+                </div>
+                <div class="grid-sizer col-xs-12 col-md-4"></div>
+                <div class="grid-item col-xs-12 col-md-4">
+                    <div class="service-block service-block-default grid-item-content">
+                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-chalkboard-teacher"></i>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "Who manages the Register?" %}</h1>
+                        <p style="text-align: left; color: black;">The National Register is managed by the Ministry of Creative Economy, Culture and Sports, which is responsible for the preservation of Barbados’ tangible and intangible heritage.  A  Technical Review Committee has been established  to oversee the nomination process. This Committee comprises Lands and Surveys Department, Data Processing Department, National Cultural Foundation, The Barbados Museum and Historical Society, Town and Country Development Planning Officer, Barbados Tourism Marketing Inc., The Barbados Archives and Barbados National Trust and private citizens with a love of heritage.  Local historians act as resource personnel.</p>
+                    </div>
+                </div>
+                <div class="grid-sizer col-xs-12 col-md-4"></div>
+                <div class="grid-item col-xs-12 col-md-4">
+                    <div class="service-block service-block-default grid-item-content">
+                        <i class="icon-custom icon-lg icon-bg-u rounded-x fas fa-users"></i>
+                        <h1 class="heading-md" style="font-weight:900;">{% trans "Who are the beneficiaries?" %}</h1>
+                        <p style="text-align: left;" "color:black;">It will be a valuable resource for heritage professionals, researchers, communities, planners, developers, Barbadians living in the Diaspora, Students, Heritage Professionals, Educators, Tourism Professionals, Community groups, Historians, Government departments; NGOs, Special Interest groups and policy makers.</p>
                     </div>
                 </div>
             </div>
@@ -243,24 +309,29 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- End FAQ Section -->
 
     <!-- Contact Section -->
-    <section id="contact" style="background-color: #FAE648;">
-        <div class="container content-lg">
-            <div class="title-v1">
+    <section id="contact" style="background-color: #FFC726; text-align: center; padding-bottom: 45px;">
+        <div class="container content-lg text-center">
+            <div class="title-v1" style=padding-top: 50px>
                 <h2>{% trans "Contact Us" %}</h2>
-                <p>Ministry of Creative Economy, Culture and Sports ...</p>
             </div>
+                <h2>Coordinator:</h2>
+                <p>Dr Sheron Johnson<br>Ministry of Creative Economy, Culture and Sports<br><a href="mailto:sheron.johnson@barbados.gov.bb">sheron.johnson@barbados.gov.bb</a><br>(246) 535-5858</p> 
+
+                <h2>Technical Review Members:</h2>
+                <p>Ms Terry Vanderpool-Fox<br>Barbados Tourism Marketing Inc.<br><a href="mail to:terryv@visitbarbados.org">terry@visitbarbados.org</a><br>(246) 535-3700</p>
+                <p>Ms Sharon Trotman<br><a href="mailto:trudehornpipe@gmail.com">trudehornpipe@gmail.com</a></p>
         </div>
     </section>
-    <!-- End News Section -->
-
+            <!-- End Contact Section -->
 
     <!-- Social Section -->
-    <footer class="social-section">
-		<p>{{copyright_year}} &copy; {{copyright_text}} </p>
-		<p>Barbados Ministry of Creative Economy, Culture and Sports</p>
-		<span class="page-scroll"><a href="#intro"><i class="fa fa-angle-double-up back-to-top"></i></a></span>
-    </footer>
-    <!-- End Contact Section -->
+    <section>
+        <footer class="social-section" style="background-color: #21438D; color: white; text-align: center; padding: 15px;">
+            <p style="color:white;">Copyright &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
+            <p style="color:white;">Barbados Ministry of Creative Economy, Culture and Sports</p>
+        </footer>
+    </section>
+   
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.0/jquery-migrate.min.js"></script>
@@ -282,6 +353,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="{% static 'plugins/style-switcher.js' %}"></script>
     <script src="{% static 'plugins/revolution-slider.js' %}"></script>
     <script src="{% static 'plugins/cube-portfolio-lightbox.js' %}"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="{% static 'packages/knockout/build/output/knockout-latest.js' %}"></script>
     <script>
         jQuery(document).ready(function() {
@@ -292,15 +364,18 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             StyleSwitcher.initStyleSwitcher();
             RevolutionSlider.initRSfullScreen();
         });
+            $('.grid').masonry({
+            itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+            columnWidth: '.grid-sizer',
+            horizontalOrder: true
+        });
 
         var ViewModel = function(first, last) {
             this.showAuthMenu = ko.observable(false);
         };
         ko.applyBindings(new ViewModel());
     </script>
-
-	<script src="{% static 'plugins/fullscreen-drag-slider-with-parallax/js/index.js' %}"></script>
+    <script src="{% static 'plugins/fullscreen-drag-slider-with-parallax/js/index.js' %}"></script>
 
 </body>
-
 </html>

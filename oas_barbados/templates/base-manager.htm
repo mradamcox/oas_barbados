@@ -105,6 +105,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                             </h1>
                         </div>
                         {% endblock graph_title %}
+                        
+                        <!-- Home Return Button -->
+                        <a href="{% url 'home' %}" class="ep-tools ep-tools-login">
+                            <h5 class="hidden-xs">{% trans "Home" %}</h5>
+                        </a>    
 
                         <!-- Login -->
                         {% if nav.login %}
