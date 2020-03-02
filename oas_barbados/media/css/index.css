@@ -65,6 +65,11 @@ a {
 	font-size: 16px;
 	color: #fff;
 }
+@media (max-width: 1280px) and (min-width:992px) {
+    .one-page-header .navbar-nav>li>a, .navbar-default .navbar-nav>li>a {
+	font-size: 14px;
+    }
+}
 .one-page-header .navbar-nav>li>a:hover {
 	color: #FFC726;
 }
@@ -82,6 +87,11 @@ a {
 }
 div.collapse.navbar-collapse.navbar-ex1-collapse > div > ul {
     margin-right: 40px;
+}
+@media (max-width: 1280px) and (min-width:992px) {
+    div.collapse.navbar-collapse.navbar-ex1-collapse > div > ul {
+	margin-right: 90px;
+    }
 }
 .one-page-header.top-nav-collapse .navbar-brand, .one-page-header.top-nav-collapse .navbar-nav>li>a, .one-page-header.top-nav-collapse .navbar-nav>li>a:before {
 	color: #fff;
