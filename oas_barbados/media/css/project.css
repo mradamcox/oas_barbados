@@ -164,9 +164,20 @@
 /******************************************************/
 
 .profile-summary-page .img-responsive {
-	max-height: 249px;
-    }
-
-.widget-bg img-responsive {
-    background-image: url(../img/photos/btown.png);
+	max-height: 249px;    
 }
+
+#panorama-bg {
+    background-image: url(../img/photos/btown.jpg);
+    background-position-x: 35%;
+}
+
+.profile-full-name {
+    font-weight:650;
+}
+
+.profile-e-mail {
+    font-weight: 700;
+    color: lightgray;
+}
+
